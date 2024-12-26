@@ -10,5 +10,5 @@
         verbosity: 0
     - name: print some host info
       debug: 
-        msg: "The hostname is {{ ansible_nodename }} and it is running {{ ansible_distribution }} {{ ansible_distribution_version }}"
+        msg: "The hostname is running {{ ansible_distribution }} {{ ansible_distribution_version }}"
 
