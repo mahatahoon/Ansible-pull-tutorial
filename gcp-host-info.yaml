@@ -1,0 +1,12 @@
+- name: First Playbook
+  hosts: all
+  gather_facts: no
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: print  host info
+      debug: 
+        verbosity: 0
+    - name: print some host info
+      debug: 
+        msg: "The hostname is {{ ansible_nodename }} and it is running {{ ansible_distribution }} {{ ansible_distribution_version }}"
