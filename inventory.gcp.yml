@@ -1,0 +1,14 @@
+plugin: google.cloud.gcp_compute
+projects:
+  - "composed-mason-437817-a0"  # Use the actual project ID (make sure it's correct)
+auth_kind: serviceaccount
+service_account_file: /home/mahatahoon/composed-mason-437817-a0-df0de99159ec.json  # Ensure this path is correct
+keyed_groups:
+  - key: labels
+    prefix: label
+hostnames:
+  - name
+compose:
+  ansible_host: networkInterfaces[0].accessConfigs[0].natIP
+filters:
+  - status = RUNNING
